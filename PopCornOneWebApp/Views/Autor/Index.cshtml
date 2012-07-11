@@ -1,0 +1,47 @@
+@model IEnumerable<PopCornOneWebApp.Models.Autor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            AutorName
+        </th>
+        <th>
+            AutorUrl
+        </th>
+        <th>
+            Phrases
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AutorId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AutorId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AutorId })
+        </td>
+        <td>
+			@item.AutorName
+        </td>
+        <td>
+			@item.AutorUrl
+        </td>
+        <td>
+			@(item.Phrases == null ? "None" : item.Phrases.Count.ToString())
+        </td>
+    </tr>
+}
+
+</table>
+
+

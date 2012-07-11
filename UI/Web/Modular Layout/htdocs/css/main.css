@@ -1,0 +1,483 @@
+
+/*******************************************************************************
+********************************************************************************
+**
+* - GENERAL
+*
+* - HEADER
+*
+* - CONTENT
+**
+********************************************************************************
+ ******************************************************************************/
+
+
+
+
+/* GENERAL ------------------------------------------------------------------ */
+
+/* Zero default margin & padding around common elements */
+body, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, li, ol, p, ul
+{
+	margin: 0;
+	border: 0 none #FFFFFF;
+	padding: 0;
+}
+
+body
+{
+	background-color: #666666;
+	background-image: url(../images/body.jpg);
+	background-repeat: repeat-x;
+	background-position: 0 97px;
+	color: #FFFFFF;
+	line-height: 1.4;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+}
+
+a:link
+{
+	color: #0066CC;
+}
+
+a:visited
+{
+	color: #0066CC;
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+img
+{
+	border: 0 none transparent;
+}
+
+input, select, table, textarea
+{
+	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearer
+{
+	clear: both;
+	height: 1px;
+	overflow: hidden;
+	margin-bottom: -1px;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.hidden
+{
+	position: absolute;
+	left: -1500em;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	margin-right: -1px;
+	margin-bottom: -1px;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.replacement
+{
+	position: absolute;
+	z-index: 10;
+	background-repeat: no-repeat;
+}
+
+* html .replacement
+{
+	top: 0;
+}
+
+a .replacement
+{
+	z-index: 20;
+	cursor: hand;
+	c\ursor: pointer;
+}
+
+#top
+{
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+}
+
+
+
+
+/* HEADER ------------------------------------------------------------------- */
+
+#header
+{
+	display: inline;
+	float: left;
+	width: 100%;
+	height: auto;
+	border-bottom: 0 none #FFFFFF;
+	padding: 13px 0 13px 0;
+	background-color: #666666;
+}
+
+#header h1
+{
+	display: inline;
+	position: relative;
+	float: left;
+	width: 275px;
+	height: 71px;
+	overflow: hidden;
+	margin: 0 0 0 19px;
+	font-size: 150%;
+}
+
+#header h1 .replacement
+{
+	left: 0;
+	top: 0;
+	width: 275px;
+	height: 71px;
+	background-image: url(../images/logo.gif);
+}
+
+#header form
+{
+	display: inline;
+	float: right;
+	margin: 0 41px 0 0;
+	padding: 24px 0 0 0;
+	color: #938F89;
+	text-align: right;
+}
+
+#header input.image
+{
+	position: relative;
+	top: 5px;
+	margin: 0 0 0 0.5em
+}
+
+#header .labelText
+{
+	margin: 0 0.5em 0 0;
+}
+
+
+
+
+/* CONTENT ------------------------------------------------------------------ */
+
+#content
+{
+	clear: both;
+	padding: 35px 41px;
+}
+
+#modules1
+{
+	display: inline;
+	position: relative;
+	z-index: 10;
+	float: left;
+	width: 187px;
+	margin: 0 -187px 35px 0;
+}
+
+#news
+{
+	display: inline;
+	float: left;
+	width: 100%;
+	margin: 0 -187px 0 0;
+}
+
+#news .moduleInner
+{
+	padding: 0 200px;
+}
+
+#modules2
+{
+	display: inline;
+	float: left;
+	width: 187px;
+	margin: 0 0 35px 0;
+}
+
+.module h2
+{
+	position: relative;
+	border: 1px solid #77BBFF;
+	border-right-color: #003399;
+	border-bottom-color: #003399;
+	padding: 0.5em 1.5em;
+	background-color: #0066CC;
+	background-image: url(../images/title_bar_blue.gif);
+	background-repeat: repeat-x;
+	font-size: 100%;
+	font-family: Georgia, Garamond, "Times New Roman", serif;
+}
+
+* html .module h2
+{
+	height: 1px;
+}
+
+.moduleDraggable h2
+{
+	cursor: move;
+}
+
+.module h2 a
+{
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 9px;
+	height: 9px;
+	overflow: hidden;
+	margin: -4px 0 0 0;
+	cursor: pointer;
+}
+
+.module h2 a img
+{
+	display: block;
+}
+
+.collapsed h2 a img
+{
+	position: relative;
+	top: -9px;
+}
+
+#news h2
+{
+	border-color: #FF7F7F;
+	border-right-color: #990000;
+	border-bottom-color: #990000;
+	background-color: #CC0000;
+	background-image: url(../images/title_bar_red.gif);
+}
+
+.moduleContent
+{
+	border: 1px solid #EDE5D5;
+	border-right-color: #66625C;
+	border-bottom-color: #66625C;
+	padding: 1.25em 1.5em 1.75em 1.5em;
+	background-color: #CCBDA3;
+	color: #000000;
+}
+
+.collapsed .moduleContent
+{
+	display: none;
+}
+
+#news .moduleContent
+{
+	border: 1px solid #FFFFFF;
+	border-right-color: #ACA69B;
+	border-bottom-color: #807B73;
+	padding-top: 1.75em;
+	background-color: #E5DDCF;
+}
+
+.moduleContent ul
+{
+	list-style: none;
+}
+
+.moduleContent li
+{
+	clear: both;
+	border-top: 1px solid #E5DDCF;
+	padding: 1em 0 0 0;
+}
+
+* html .moduleContent li
+{
+	height: 1px;
+}
+
+.moduleContent li.first
+{
+	padding-top: 0 !important;
+}
+
+.thumbnail
+{
+	display: inline;
+	float: left;
+	background-color: #C3BCB0;
+	margin: 0 1.5em 0.5em 0;
+}
+
+.thumbnail img
+{
+	display: block;
+	position: relative;
+	left: -2px;
+	top: -2px;
+	border: 5px solid #FFFFFF;
+}
+
+h3
+{
+	margin: 0 0 0.25em 0;
+	font-size: 115%;
+	line-height: 1.1;
+}
+
+#ghost
+{
+	position: absolute;
+	z-index: 20;
+	width: 187px;
+	background-color: #000000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	cursor: move;
+}
+
+#ghost .module
+{
+	opacity: 0.65;
+	filter: alpha(opacity=50);
+}
+
+#ghostMarker
+{
+	position: absolute;
+	z-index: 15;
+	width: 185px;
+	height: 5px;
+	overflow: hidden;
+	border: 1px solid #00FF00;
+	background-color: #00CC00;
+}
+
+#moduleWeather .moduleContent
+{
+	padding-top: 0.75em;
+}
+
+#moduleWeather p
+{
+	margin: 0.5em 0 0 0;
+	padding: 0 0 0 50px;
+}
+
+#moduleWeather .moduleContent img
+{
+	display: inline;
+	position: relative;
+	left: -50px;
+	float: left;
+	margin: 0 -39px 0 0;
+}
+
+#moduleCalendar .moduleContent
+{
+	text-align: center;
+}
+
+#moduleCalendar table
+{
+	margin: 0 auto;
+	font-size: 85%;
+}
+
+#moduleCalendar caption
+{
+	text-align: center;
+	font-weight: bold;
+}
+
+#moduleCalendar th
+{
+	width: 1.75em;
+	height: 1.75em;
+	background-color: #998E7A;
+	color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#moduleCalendar td
+{
+	width: 1.75em;
+	height: 1.75em;
+	background-color: #E5DDCF;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#moduleMovie ul
+{
+	margin-top: -1em;
+	list-style: none;
+}
+
+#moduleMovie li
+{
+	margin: 1em 0 0 0;
+	border: 0 none #FFFFFF;
+	padding: 0;
+}
+
+#moduleMovie h3
+{
+	font-size: 100%;
+}
+
+#moduleSearch .labelText
+{
+	display: block;
+	font-weight: bold;
+}
+
+#moduleSearch input.image
+{
+	position: relative;
+	top: 5px;
+	margin: 0 0 0 0.25em;
+}
+
+#moduleHoroscope .moduleContent img
+{
+	display: inline;
+	float: right;
+	margin: -5px 0 0.25em 0.5em;
+}
+
+#moduleHoroscope h3
+{
+	margin-top: 7px;
+	font-size: 100%;
+}
+
+#moduleBlogroll ul
+{
+	margin-top: -0.5em;
+	list-style: none;
+}
+
+#moduleBlogroll li
+{
+	margin: 0.5em 0 0 0;
+	border: 0 none #FFFFFF;
+	padding: 0 0 0 12px;
+	background-image: url(../images/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0.5em;
+}

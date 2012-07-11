@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+
+
+<head>
+
+	<title>Custom Modular Layout</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="The Man in Blue" />
+	<meta name="robots" content="all" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	
+	<script type="text/javascript" src="scripts/event_listeners.js"></script>
+	<script type="text/javascript" src="scripts/class_names.js"></script>
+	<script type="text/javascript" src="scripts/expand_collapse.js"></script>
+	<script type="text/javascript" src="scripts/modular.js"></script>
+	
+</head>
+
+
+
+
+<body>
+	<ul id="top">
+		<li id="skipNav">
+			<a href="#menu">Skip to navigation</a>
+		</li>
+		<li>
+			<a href="#content">Skip to content</a>
+		</li>
+	</ul>
+	<div id="header">
+		<h1>
+			<span class="replacement"></span><a href="#"><span class="replacement"></span>The Modular Layout</a>
+		</h1>
+	</div> <!-- END #header -->
+	<div id="content">
+		<div id="modules1">
+			<div id="moduleSearch" class="module">
+				<h2>
+					Search
+				</h2>
+				<div class="moduleContent">
+					<form action="search/">
+						<fieldset>
+							<label for="searchField">
+								<span class="labelText">Search the Web</span>
+								<input id="searchField" name="searchField" class="text" type="text" size="13" />
+							</label>
+							<input class="image" type="image" src="images/button_search.gif" alt="Submit" />
+						</fieldset>
+					</form>
+				</div> <!-- END .moduleContent -->
+			</div> <!-- END .module -->
+			<div id="moduleWeather" class="module">
+				<h2>
+					Weather
+				</h2>
+				<div class="moduleContent">
+					<p>
+						<img src="images/icon_sunny.gif" width="39" height="27" alt="Sunny" />
+						<strong>Today:</strong> Sunny with a bit of cloud, 25&deg;C
+					</p>
+					<p>
+						<img src="images/icon_rain.gif" width="39" height="27" alt="Rainy" />
+						<strong>Tomorrow:</strong> Scattered showers in the East, 19&deg;C
+					</p>
+				</div> <!-- END .moduleContent -->
+			</div> <!-- END .module -->
+			<div id="moduleCalendar" class="module">
+				<h2>
+					Calendar
+				</h2>
+				<div class="moduleContent">
+					<table cellpadding="0" cellspacing="1">
+						<caption>
+							March 2007
+						</caption>
+						<thead>
+							<tr>
+								<th scope="col">
+									M
+								</th>
+								<th scope="col">
+									T
+								</th>
+								<th scope="col">
+									W
+								</th>
+								<th scope="col">
+									T
+								</th>
+								<th scope="col">
+									F
+								</th>
+								<th scope="col">
+									S
+								</th>
+								<th scope="col">
+									S
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+									1
+								</td>
+								<td>
+									2
+								</td>
+								<td>
+									3
+								</td>
+								<td>
+									4
+								</td>
+								<td>
+									5
+								</td>
+							</tr>
+							<tr>
+								<td>
+									6
+								</td>
+								<td>
+									7
+								</td>
+								<td>
+									8
+								</td>
+								<td>
+									9
+								</td>
+								<td>
+									10
+								</td>
+								<td>
+									11
+								</td>
+								<td>
+									12
+								</td>
+							</tr>
+							<tr>
+								<td>
+									13
+								</td>
+								<td>
+									14
+								</td>
+								<td>
+									15
+								</td>
+								<td>
+									16
+								</td>
+								<td>
+									17
+								</td>
+								<td>
+									18
+								</td>
+								<td>
+									19
+								</td>
+							</tr>
+							<tr>
+								<td>
+									20
+								</td>
+								<td>
+									21
+								</td>
+								<td>
+									22
+								</td>
+								<td>
+									23
+								</td>
+								<td>
+									24
+								</td>
+								<td>
+									25
+								</td>
+								<td>
+									26
+								</td>
+							</tr>
+							<tr>
+								<td>
+									27
+								</td>
+								<td>
+									28
+								</td>
+								<td>
+									29
+								</td>
+								<td>
+									30
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div> <!-- END .moduleContent -->
+			</div> <!-- END .module -->
+		</div> <!-- END #modules1 -->
+		<div id="news" class="module">
+			<div class="moduleInner">
+				<h2>
+					Latest News
+				</h2>
+				<div class="moduleContent">
+					<ul>
+						<li class="first">
+							<div class="thumbnail">
+								<img src="images/thumbnail1.jpg" width="75" height="75" alt="Thumbnail" />
+							</div> <!-- END .thumbnail -->
+							<h3>
+								How to get ahead without trying
+							</h3>
+							<p>
+								JavaScript is rife with unexplored nooks and crannies that can trip up even the most seasoned programmers. Billy Youkip investigates one of the deepest: the basic question of scope and context.
+							</p>
+						</li>
+						<li>
+							<div class="thumbnail">
+								<img src="images/thumbnail2.jpg" width="75" height="75" alt="Thumbnail" />
+							</div> <!-- END .thumbnail -->
+							<h3>
+								Mysterious rumblings
+							</h3>
+							<p>
+								JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.
+							</p>
+						</li>
+						<li>
+							<div class="thumbnail">
+								<img src="images/thumbnail7.jpg" width="75" height="75" alt="Thumbnail" />
+							</div> <!-- END .thumbnail -->
+							<h3>
+								Time to go underground
+							</h3>
+							<p>
+								Closures are one of the most powerful features of ECMAScript (javascript) but they cannot be properly exploited without understanding them.
+							</p>
+						</li>
+						<li>
+							<div class="thumbnail">
+								<img src="images/thumbnail4.jpg" width="75" height="75" alt="Thumbnail" />
+							</div> <!-- END .thumbnail -->
+							<h3>
+								Hard rock climbing
+							</h3>
+							<p>
+								Prototype is a JavaScript framework that aims to ease development of dynamic web applications. A unique, easy-to-use toolkit for class-driven development.
+							</p>
+						</li>
+						<li>
+							<div class="thumbnail">
+								<img src="images/thumbnail3.jpg" width="75" height="75" alt="Thumbnail" />
+							</div> <!-- END .thumbnail -->
+							<h3>
+								Beginning of a new world
+							</h3>
+							<p>
+								The latest release of Dojo improves the already ground-breaking 0.3.x line with over a hundred improvements. 0.3.1 is a maintainance release and is recommended for all users of Dojo.
+							</p>
+						</li>
+						<li>
+							<div class="thumbnail">
+								<img src="images/thumbnail6.jpg" width="75" height="75" alt="Thumbnail" />
+							</div> <!-- END .thumbnail -->
+							<h3>
+								Shout &amp; cheer
+							</h3>
+							<p>
+								This whole memory thing seems to be more important and more complicated than I thought. I have absolutely zero knowledge of software development and related skills, so I never worried about memory leaks
+							</p>
+						</li>
+					</ul>
+					<div class="clearer"></div>
+				</div> <!-- END .moduleContent -->
+			</div> <!-- END .moduleInner -->
+		</div> <!-- END .module -->
+		<div id="modules2">
+			<div id="moduleHoroscope" class="module">
+				<h2>
+					Horoscope
+				</h2>
+				<div class="moduleContent">
+					<img src="images/icon_capricorn.gif" width="42" height="42" alt="Capricorn" />
+					<h3>
+						Capricorn
+					</h3>
+					<p>
+						As the goat, you'll be eating lots of grass this week. You should also watch out for any trolls under bridges, they'll give you a hard time.
+					</p>
+				</div> <!-- END .moduleContent -->
+			</div> <!-- END .module -->
+			<div id="moduleMovie" class="module">
+				<h2>
+					Movie Reviews
+				</h2>
+				<div class="moduleContent">
+					<ul>
+						<li>
+							<h3>
+								Miami Vice
+							</h3>
+							<p>
+								Seriously, this movie just rocks. Go out and see it now!
+							</p>
+						</li>
+						<li>
+							<h3>
+								Pirates of the Caribbean 2
+							</h3>
+							<p>
+								Meh, not so good.
+							</p>
+						</li>
+					</ul>
+				</div> <!-- END .moduleContent -->
+			</div> <!-- END .module -->
+			<div id="moduleBlogroll" class="module">
+				<h2>
+					Blogroll
+				</h2>
+				<div class="moduleContent">
+					<ul>
+						<li>
+							<a href="http://www.themaninblue.com/">The Man in Blue</a>
+						</li>
+						<li>
+							<a href="http://www.stopdesign.com/">Stop Design</a>
+						</li>
+						<li>
+							<a href="http://www.toolmantim.com/">Toolman Tim</a>
+						</li>
+						<li>
+							<a href="http://www.redqueen.com.au/">Red Queen</a>
+						</li>
+						<li>
+							<a href="http://www.maxdesign.com.au/">Max Design</a>
+						</li>
+						<li>
+							<a href="http://westciv.typepad.com/dog_or_higher/">Dog or Higher</a>
+						</li>
+					</ul>
+				</div> <!-- END .moduleContent -->
+			</div> <!-- END .module -->
+		</div> <!-- END #modules2 -->
+		<div class="clearer"></div>
+	</div> <!-- END #content -->
+</body>
+
+
+
+
+</html>

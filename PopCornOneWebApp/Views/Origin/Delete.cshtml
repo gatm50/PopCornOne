@@ -1,0 +1,29 @@
+@model PopCornOneWebApp.Models.Origin
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Origin</legend>
+
+    <div class="display-label">OriginName</div>
+    <div class="display-field">@Model.OriginName</div>
+
+    <div class="display-label">OriginUrl</div>
+    <div class="display-field">@Model.OriginUrl</div>
+
+    <div class="display-label">Phrases</div>
+    <div class="display-field">@(Model.Phrases == null ? "None" : Model.Phrases.Count.ToString())</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+

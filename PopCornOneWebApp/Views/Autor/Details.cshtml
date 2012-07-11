@@ -1,0 +1,26 @@
+@model PopCornOneWebApp.Models.Autor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Autor</legend>
+
+    <div class="display-label">AutorName</div>
+    <div class="display-field">@Model.AutorName</div>
+
+    <div class="display-label">AutorUrl</div>
+    <div class="display-field">@Model.AutorUrl</div>
+
+    <div class="display-label">Phrases</div>
+    <div class="display-field">@(Model.Phrases == null ? "None" : Model.Phrases.Count.ToString())</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AutorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
