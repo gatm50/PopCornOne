@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ab76a113-66a3-4a96-aa5a-d813b8ee82e5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59027/WebServices/TranslationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TranslationService.wsdl" MetadataType="Wsdl" ID="ec6dff52-0d16-4696-a1eb-b881037e0984" SourceId="1" SourceUrl="http://localhost:59027/WebServices/TranslationService.svc?wsdl" />
+    <MetadataFile FileName="TranslationService.xsd" MetadataType="Schema" ID="162cd9de-1706-4b47-becc-65b48c59f65f" SourceId="1" SourceUrl="http://localhost:59027/WebServices/TranslationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TranslationService1.xsd" MetadataType="Schema" ID="74836d67-e523-4675-922d-111a326836f5" SourceId="1" SourceUrl="http://localhost:59027/WebServices/TranslationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TranslationService2.xsd" MetadataType="Schema" ID="ae2f3b7f-72c9-4f60-9c6d-1ec29887ee2a" SourceId="1" SourceUrl="http://localhost:59027/WebServices/TranslationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TranslationService.disco" MetadataType="Disco" ID="d1969174-69e0-47c3-8ab4-8c43e3810581" SourceId="1" SourceUrl="http://localhost:59027/WebServices/TranslationService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9bc27b76-8e43-40cc-aa76-1041fbc6c259" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59027/WebServices/OriginService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OriginService.xsd" MetadataType="Schema" ID="f02a62a3-76fc-4ec7-a4b9-6480eecd7a4a" SourceId="1" SourceUrl="http://localhost:59027/WebServices/OriginService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OriginService.wsdl" MetadataType="Wsdl" ID="669d8da8-a0e8-4e63-9a3e-469c3bf81e28" SourceId="1" SourceUrl="http://localhost:59027/WebServices/OriginService.svc?wsdl" />
+    <MetadataFile FileName="OriginService1.xsd" MetadataType="Schema" ID="ee2d745b-6092-4ed5-bf69-1e941dae4c7b" SourceId="1" SourceUrl="http://localhost:59027/WebServices/OriginService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OriginService.disco" MetadataType="Disco" ID="0e7aee74-438e-47ae-a080-556ca720e580" SourceId="1" SourceUrl="http://localhost:59027/WebServices/OriginService.svc?disco" />
+    <MetadataFile FileName="OriginService2.xsd" MetadataType="Schema" ID="3d1247de-7167-4b92-86d0-6b6eef519468" SourceId="1" SourceUrl="http://localhost:59027/WebServices/OriginService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

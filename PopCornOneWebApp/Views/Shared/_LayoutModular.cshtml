@@ -32,16 +32,52 @@
             );
         });
     </script>
+    <script type="text/javascript" src="../../Scripts/Silverlight.js"></script>
+    <script type="text/javascript">
+        function onSilverlightError(sender, args) {
+            var appSource = "";
+            if (sender != null && sender != 0) {
+                appSource = sender.getHost().Source;
+            }
+
+            var errorType = args.ErrorType;
+            var iErrorCode = args.ErrorCode;
+
+            if (errorType == "ImageError" || errorType == "MediaError") {
+                return;
+            }
+
+            var errMsg = "Unhandled Error in Silverlight Application " + appSource + "\n";
+
+            errMsg += "Code: " + iErrorCode + "    \n";
+            errMsg += "Category: " + errorType + "       \n";
+            errMsg += "Message: " + args.ErrorMessage + "     \n";
+
+            if (errorType == "ParserError") {
+                errMsg += "File: " + args.xamlFile + "     \n";
+                errMsg += "Line: " + args.lineNumber + "     \n";
+                errMsg += "Position: " + args.charPosition + "     \n";
+            }
+            else if (errorType == "RuntimeError") {
+                if (args.lineNumber != 0) {
+                    errMsg += "Line: " + args.lineNumber + "     \n";
+                    errMsg += "Position: " + args.charPosition + "     \n";
+                }
+                errMsg += "MethodName: " + args.methodName + "     \n";
+            }
+
+            throw new Error(errMsg);
+        }
+    </script>
 </head>
 <body>
-    <ul id="top">
-        <li id="skipNav"><a href="#menu">Skip to navigation</a> </li>
-        <li><a href="#content">Skip to content</a> </li>
-    </ul>
     <div id="header">
         <h1>
-            <span class="replacement"></span><a href="#"><span class="replacement"></span>The Modular
-                Layout</a>
+            <span class="replacement"></span>
+            <a href="#">
+                <span class="replacement"></span>
+                Pop Corn One Manager
+            </a>
         </h1>
     </div>
     <!-- END #header -->
@@ -57,28 +93,12 @@
                 <!-- END .moduleContent -->
             </div>
             <!-- END .module -->
-            <div id="moduleWeather" class="module">
-                <h3 class="moduleheader">
-                    Autors
-                </h3>
-                <div class="moduleContent">
-                    <p>
-                        <img src="images/icon_sunny.gif" width="39" height="27" alt="Sunny" />
-                        <strong>Today:</strong> Sunny with a bit of cloud, 25&deg;C
-                    </p>
-                </div>
-                <!-- END .moduleContent -->
-            </div>
-            <!-- END .module -->
             <div id="moduleOrigin" class="module">
                 <h3 class="moduleheader">
                     Origins
                 </h3>
                 <div class="moduleContent">
-                    <p>
-                        <img src="images/icon_sunny.gif" width="39" height="27" alt="Sunny" />
-                        <strong>Today:</strong> Sunny with a bit of cloud, 25&deg;C
-                    </p>
+                    @{Html.RenderAction("OriginWidget", "Origin");}
                 </div>
                 <!-- END .moduleContent -->
             </div>
@@ -91,37 +111,7 @@
                     Phrase Editor
                 </h2>
                 <div class="moduleContent">
-                    <ul>
-                        <li class="first">
-                            <div class="thumbnail">
-                                <img src="images/thumbnail1.jpg" width="75" height="75" alt="Thumbnail" />
-                            </div>
-                            <!-- END .thumbnail -->
-                            <h3>
-                                How to get ahead without trying
-                            </h3>
-                            <p>
-                                JavaScript is rife with unexplored nooks and crannies that can trip up even the
-                                most seasoned programmers. Billy Youkip investigates one of the deepest: the basic
-                                question of scope and context.
-                            </p>
-                        </li>
-                        <li>
-                            <div class="thumbnail">
-                                <img src="images/thumbnail6.jpg" width="75" height="75" alt="Thumbnail" />
-                            </div>
-                            <!-- END .thumbnail -->
-                            <h3>
-                                Shout &amp; cheer
-                            </h3>
-                            <p>
-                                This whole memory thing seems to be more important and more complicated than I thought.
-                                I have absolutely zero knowledge of software development and related skills, so
-                                I never worried about memory leaks
-                            </p>
-                            @RenderBody()
-                        </li>
-                    </ul>
+                    @RenderBody()
                     <div class="clearer">
                     </div>
                 </div>
@@ -130,32 +120,10 @@
             <!-- END .moduleInner -->
             <div class="moduleInner">
                 <h3 class="moduleheader">
-                    Phrase Editor
+                    Autor Editor
                 </h3>
                 <div class="moduleContent">
-                    <table id="phrasesTable">
-                        <thead>
-                            <tr>
-                                <th>
-                                </th>
-                                <th>
-                                    Languages
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit") |
-                                    @Html.ActionLink("Details", "Details") |
-                                    @Html.ActionLink("Delete", "Delete")
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        @{Html.RenderAction("AutorWidget", "Autor");}
                     <div class="clearer">
                     </div>
                 </div>

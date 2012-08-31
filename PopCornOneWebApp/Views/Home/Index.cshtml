@@ -3,7 +3,14 @@
     Layout = "~/Views/Shared/_LayoutModular.cshtml";
 }
 
-<h2>@ViewBag.Message</h2>
-<p>
-    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-</p>
+<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    width="600" height="500" style=" margin-left:-7px;">
+    <param name="source" value="../ClientBin/PhraseWidget.xap" />
+    <param name="background" value="White" />
+    <param name="minRuntimeVersion" value="4.0.60129.0" />
+    <param name="autoUpgrade" value="true" />
+    <a href="http://www.microsoft.com/getsilverlight/get-started/install/" style="text-decoration: none">
+        <img src="http://go.microsoft.com/fwlink/?LinkId=161376" alt="Get Microsoft Silverlight"
+            style="border-style: none" />
+    </a>
+</object>

@@ -8,7 +8,7 @@
           </StartPageUrl>
           <StartAction>SpecificPage</StartAction>
           <AspNetDebugging>True</AspNetDebugging>
-          <SilverlightDebugging>False</SilverlightDebugging>
+          <SilverlightDebugging>True</SilverlightDebugging>
           <NativeDebugging>False</NativeDebugging>
           <SQLDebugging>False</SQLDebugging>
           <ExternalProgram>
@@ -21,6 +21,12 @@
           </StartWorkingDirectory>
           <EnableENC>False</EnableENC>
           <AlwaysStartWebServerOnDebug>True</AlwaysStartWebServerOnDebug>
+          <ProjectOutputReferences>
+            <Ref Project="{2ED8D6C3-4274-4B1F-A7C7-748882B26EB9}" Folder="ClientBin">LanguageWidget.xap</Ref>
+            <Ref Project="{124F2253-092D-4447-8D3B-F580B2FD5873}" Folder="ClientBin">AutorWidget.xap</Ref>
+            <Ref Project="{4B12F316-BA11-42D0-B62F-19538909D64B}" Folder="ClientBin">OriginWidget.xap</Ref>
+            <Ref Project="{0A20610E-0176-4EBC-B7BE-A6B3206B09F7}" Folder="ClientBin">PhraseWidget.xap</Ref>
+          </ProjectOutputReferences>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

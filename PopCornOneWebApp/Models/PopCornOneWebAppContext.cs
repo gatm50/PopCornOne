@@ -22,5 +22,9 @@ namespace PopCornOneWebApp.Models
         public DbSet<PopCornOneWebApp.Models.Origin> Origins { get; set; }
 
         public DbSet<PopCornOneWebApp.Models.Language> Languages { get; set; }
+
+        public DbSet<PopCornOneWebApp.Models.Phrase> Phrases { get; set; }
+
+        public DbSet<PopCornOneWebApp.Models.Translation> Translations { get; set; }
     }
 }

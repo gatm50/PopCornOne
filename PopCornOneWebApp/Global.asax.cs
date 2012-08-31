@@ -32,7 +32,7 @@ namespace PopCornOneWebApp
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
+            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<PopCornOneWebApp.Models.PopCornOneWebAppContext>());
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }

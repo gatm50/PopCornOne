@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IOriginService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:59027/WebServices/OriginService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IOriginService"
+                contract="OriginReference.IOriginService" name="BasicHttpBinding_IOriginService" />
+        </client>
+    </system.serviceModel>
+</configuration>

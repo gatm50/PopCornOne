@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c2754eee-8f89-447e-93db-d885ddc52c31" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59027/WebServices/AutorService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AutorService.wsdl" MetadataType="Wsdl" ID="867f8e7c-d2a8-4a2d-8f9c-11f0d7544c76" SourceId="1" SourceUrl="http://localhost:59027/WebServices/AutorService.svc?wsdl" />
+    <MetadataFile FileName="AutorService.disco" MetadataType="Disco" ID="c1ebb254-7954-4fd1-ae9f-5ae0f10d8ba7" SourceId="1" SourceUrl="http://localhost:59027/WebServices/AutorService.svc?disco" />
+    <MetadataFile FileName="AutorService.xsd" MetadataType="Schema" ID="fcfbf0ca-4de4-44a1-a30b-ed33d17c575d" SourceId="1" SourceUrl="http://localhost:59027/WebServices/AutorService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AutorService1.xsd" MetadataType="Schema" ID="c20d9546-7c2c-4218-abc3-b6337a70b340" SourceId="1" SourceUrl="http://localhost:59027/WebServices/AutorService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AutorService2.xsd" MetadataType="Schema" ID="c2152c76-7dba-46bd-89c2-9790352aacfc" SourceId="1" SourceUrl="http://localhost:59027/WebServices/AutorService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

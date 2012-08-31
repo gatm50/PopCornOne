@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b8ae40de-86cc-440a-be0c-31d2cf1c8403" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59027/WebServices/PhraseService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PhraseService.xsd" MetadataType="Schema" ID="fc96ce9b-88bf-4305-834a-8d75fc22796c" SourceId="1" SourceUrl="http://localhost:59027/WebServices/PhraseService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PhraseService1.xsd" MetadataType="Schema" ID="b8bbb841-603b-4858-8e0b-a01ae36745b4" SourceId="1" SourceUrl="http://localhost:59027/WebServices/PhraseService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PhraseService2.xsd" MetadataType="Schema" ID="aabe41ed-fe0e-4f4d-b879-e834d6df60f9" SourceId="1" SourceUrl="http://localhost:59027/WebServices/PhraseService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PhraseService.disco" MetadataType="Disco" ID="ae015133-91c7-45da-b85f-f63e14e4eedb" SourceId="1" SourceUrl="http://localhost:59027/WebServices/PhraseService.svc?disco" />
+    <MetadataFile FileName="PhraseService.wsdl" MetadataType="Wsdl" ID="50ecce8b-5d93-4e1a-867e-6120dcd59f4d" SourceId="1" SourceUrl="http://localhost:59027/WebServices/PhraseService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

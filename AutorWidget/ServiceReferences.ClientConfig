@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IAutorService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:59027/WebServices/AutorService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IAutorService"
+                contract="AutorReference.IAutorService" name="BasicHttpBinding_IAutorService" />
+        </client>
+    </system.serviceModel>
+</configuration>

@@ -1,0 +1,34 @@
+<navigation:Page x:Class="PhraseWidget.Home" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+    d:DesignWidth="540" d:DesignHeight="500" mc:Ignorable="d"
+    Style="{StaticResource PageStyle}" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+    <Grid x:Name="LayoutRoot">
+        <sdk:DataGrid AutoGenerateColumns="False" Height="388" HorizontalAlignment="Left" Margin="12,86,0,0" Name="dtgPhrases" VerticalAlignment="Top" Width="322" ItemsSource="{Binding Path=Phrases2}" IsReadOnly="True" SelectionChanged="dtgPhrases_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="ID Phrase" Width="100" Binding="{Binding Phrase.phraseId}"></sdk:DataGridTextColumn>
+                <sdk:DataGridTextColumn Header="Content" Width="200" Binding="{Binding Translation.TranslationContent}">
+                    <sdk:DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </sdk:DataGridTextColumn.ElementStyle>
+                </sdk:DataGridTextColumn>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Create New Phrase" Height="31" HorizontalAlignment="Left" Margin="12,44,0,0" Name="btnCreatePhrase" VerticalAlignment="Top" Width="139" Command="{Binding CreatePhraseCommand}" />
+        <Button Content="Edit" Height="31" HorizontalAlignment="Left" Margin="157,44,0,0" Name="btnEditPhrase" VerticalAlignment="Top" Width="75" Command="{Binding EditPhraseCommand}" CommandParameter="{Binding ElementName=dtgPhrases, Path=SelectedItem}" />
+        <Button Content="Delete" Height="31" HorizontalAlignment="Left" Margin="237,43,0,0" Name="btnDeletePhrase" VerticalAlignment="Top" Width="75" Command="{Binding DeletePhraseCommand}" CommandParameter="{Binding ElementName=dtgPhrases, Path=SelectedItem}" />
+        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="340,69,0,0" Name="lblTranslations" VerticalAlignment="Top" Width="120" Content="Translations" />
+        <ListBox Height="272" HorizontalAlignment="Left" Margin="340,86,0,0" Name="lstTranslation" VerticalAlignment="Top" Width="188" ItemsSource="{Binding TranslationsComplete}" DisplayMemberPath="Language.LanguageName" />
+        <Button Content="Edit Translation" Height="33" HorizontalAlignment="Left" Margin="340,402,0,0" Name="EditTranslation" VerticalAlignment="Top" Width="188" Command="{Binding EditTranslationCommand}" CommandParameter="{Binding ElementName=lstTranslation, Path=SelectedItem}" />
+        <Button Content="Delete Translation" Height="33" HorizontalAlignment="Left" Margin="340,441,0,0" Name="DeleteTranslation" VerticalAlignment="Top" Width="188" Command="{Binding DeleteTranslationCommand}" CommandParameter="{Binding ElementName=lstTranslation, Path=SelectedItem}" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="txtSearch" VerticalAlignment="Top" Width="139" />
+        <Button Content="Create New Translation" Height="33" HorizontalAlignment="Left" Margin="340,364,0,0" Name="button1" VerticalAlignment="Top" Width="188" Command="{Binding CreateTranslationCommand}" CommandParameter="{Binding ElementName=dtgPhrases, Path=SelectedItem}" />
+    </Grid>
+
+</navigation:Page>

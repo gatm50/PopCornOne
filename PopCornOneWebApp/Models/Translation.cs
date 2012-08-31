@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 
 namespace PopCornOneWebApp.Models
 {
@@ -12,17 +13,32 @@ namespace PopCornOneWebApp.Models
         
         [Required]
         [Display(Name = "Translation content")]
+        [DataMember]
         public string TranslationContent { get; set; }
 
         [Display(Name = "Translation description")]
+        [DataMember]
         public string TranslationDescription { get; set; }
+        
+        [DataMember]
         public string TranslationFirstLetter { get; set; }
+
+        [DataMember]
         public string Lexicon { get; set; }
 
+        [DataMember]
         public int LanguageId { get; set; }
+
+        [DataMember]
         public int PhraseId { get; set; }
 
-        public virtual Language Language_ { get; set; }
-        public virtual Phrase Phrase_ { get; set; }
+        [DataMember]
+        public bool PhraseByDefault { get; set; }
+
+        //[DataMember]
+        //public virtual Language Language_ { get; set; }
+
+        //[DataMember]
+        //public virtual Phrase Phrase_ { get; set; }
     }
 }

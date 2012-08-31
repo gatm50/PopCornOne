@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a94f52a3-8aff-42c2-9593-dfd6687d8456" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59027/WebServices/LanguageService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LanguageService.xsd" MetadataType="Schema" ID="5c6cd559-0227-4473-ac77-df5c7d30d3cc" SourceId="1" SourceUrl="http://localhost:59027/WebServices/LanguageService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LanguageService1.xsd" MetadataType="Schema" ID="ad02c2b4-da5e-4561-af46-a0b0ccaf0d73" SourceId="1" SourceUrl="http://localhost:59027/WebServices/LanguageService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LanguageService2.xsd" MetadataType="Schema" ID="ebfa3ef3-8d22-42fc-ba38-14c4f788d0ee" SourceId="1" SourceUrl="http://localhost:59027/WebServices/LanguageService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LanguageService.disco" MetadataType="Disco" ID="ad588ab5-5848-4363-8125-f66046138abe" SourceId="1" SourceUrl="http://localhost:59027/WebServices/LanguageService.svc?disco" />
+    <MetadataFile FileName="LanguageService.wsdl" MetadataType="Wsdl" ID="bfc31b44-ab7c-47ab-86ec-6bf6f77c4c6c" SourceId="1" SourceUrl="http://localhost:59027/WebServices/LanguageService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

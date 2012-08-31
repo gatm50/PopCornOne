@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -15,6 +16,12 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
+    <SilverlightApplicationList>{2ED8D6C3-4274-4B1F-A7C7-748882B26EB9}|..\LanguageWidget\LanguageWidget.csproj|ClientBin|False,{124F2253-092D-4447-8D3B-F580B2FD5873}|..\AutorWidget\AutorWidget.csproj|ClientBin|False,{4B12F316-BA11-42D0-B62F-19538909D64B}|..\OriginWidget\OriginWidget.csproj|ClientBin|False,{0A20610E-0176-4EBC-B7BE-A6B3206B09F7}|..\PhraseWidget\PhraseWidget.csproj|ClientBin|False</SilverlightApplicationList>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,6 +47,8 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -79,8 +88,32 @@
     <Compile Include="Models\PopCornOneWebAppContext.cs" />
     <Compile Include="Models\Translation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebServices\AutorService.svc.cs">
+      <DependentUpon>AutorService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\IAutorService.cs" />
+    <Compile Include="WebServices\ILanguageService.cs" />
+    <Compile Include="WebServices\IOriginService.cs" />
+    <Compile Include="WebServices\IPhraseService.cs" />
+    <Compile Include="WebServices\ITranslationService.cs" />
+    <Compile Include="WebServices\LanguageService.svc.cs">
+      <DependentUpon>LanguageService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\OriginService.svc.cs">
+      <DependentUpon>OriginService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\PhraseService.svc.cs">
+      <DependentUpon>PhraseService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\TranslationService.svc.cs">
+      <DependentUpon>TranslationService.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientBin\AutorWidget.xap" />
+    <Content Include="ClientBin\LanguageWidget.xap" />
+    <Content Include="ClientBin\OriginWidget.xap" />
+    <Content Include="ClientBin\PhraseWidget.xap" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_eeeeee_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_55_ffffff_40x100.png" />
@@ -165,6 +198,7 @@
     <Content Include="Scripts\modular\expand_collapse.js" />
     <Content Include="Scripts\modular\modular.js" />
     <Content Include="Scripts\modular\modular_cookie.js" />
+    <Content Include="Scripts\Silverlight.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -194,6 +228,11 @@
     <Content Include="Views\Shared\_LogOnPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="WebServices\AutorService.svc" />
+    <Content Include="WebServices\LanguageService.svc" />
+    <Content Include="WebServices\OriginService.svc" />
+    <Content Include="WebServices\PhraseService.svc" />
+    <Content Include="WebServices\TranslationService.svc" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -202,67 +241,27 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Autor\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Autor\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Autor\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Autor\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Autor\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Autor\_CreateOrEdit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Origin\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Origin\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Origin\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Origin\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Origin\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Origin\_CreateOrEdit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Language\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Language\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Language\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Language\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Language\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Language\_CreateOrEdit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Shared\_LayoutModular.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Language\LanguageWidget.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Language\ViewPage1.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Origin\OriginWidget.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Autor\AutorWidget.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -277,7 +276,7 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
+          <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>59027</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
