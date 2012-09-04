@@ -87,7 +87,7 @@ namespace LanguageWidget.ViewModel
         public DelegateCommand CreateLanguageCommand { get; private set; }
         void AddContact_Execute(object parameters)
         {
-            LanguageReference.Language temporalLanguage = new LanguageReference.Language { LanguageId = 0, LanguageName = "Insert Language Name" };
+            LanguageReference.Language temporalLanguage = new LanguageReference.Language { LanguageId = 0, LanguageName = "" };
             EditorWindow dialog = new EditorWindow();
             EditorViewModel editorViewModel = new EditorViewModel(temporalLanguage);
             _modalDialogService.ShowDialog<EditorViewModel>(dialog,

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3939f8d3-0611-4941-987a-2e41d00662a8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59027/WebServices/PhraseService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PhraseService.wsdl" MetadataType="Wsdl" ID="ae5c7f49-d5ce-4d58-a761-5b7f2fda5093" SourceId="1" SourceUrl="http://localhost:59027/WebServices/PhraseService.svc?wsdl" />
+    <MetadataFile FileName="PhraseService.xsd" MetadataType="Schema" ID="35faecd6-eea4-4d03-a55b-bef7143e322f" SourceId="1" SourceUrl="http://localhost:59027/WebServices/PhraseService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PhraseService1.xsd" MetadataType="Schema" ID="da092039-0958-486a-b5bf-927fc536fd38" SourceId="1" SourceUrl="http://localhost:59027/WebServices/PhraseService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PhraseService2.xsd" MetadataType="Schema" ID="ec201da5-1a16-46c0-977f-b86225008f30" SourceId="1" SourceUrl="http://localhost:59027/WebServices/PhraseService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

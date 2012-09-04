@@ -4,10 +4,10 @@
     xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
     xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
     Title="Phrase Information"
-    Width="566" Height="289"
+    Width="623" Height="353"
     Style="{StaticResource ChildWindowStyle}">
 
-    <Grid x:Name="LayoutRoot" Height="223" Width="536">
+    <Grid x:Name="LayoutRoot" Margin="10,0,5,19">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="212*" />
             <ColumnDefinition Width="174*" />
@@ -21,14 +21,16 @@
         <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="30" HorizontalAlignment="Right" Grid.Row="1" Margin="0,8,12,8" Grid.Column="1" />
         <TextBox Height="89" HorizontalAlignment="Left" Margin="95,12,0,0" Name="txtContent" VerticalAlignment="Top" Width="162" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Text="{Binding Content, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
         <TextBox Grid.RowSpan="2" Height="95" HorizontalAlignment="Left" Margin="95,107,0,0" Name="txtDescription" VerticalAlignment="Top" Width="162" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Text="{Binding Description, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
-        <sdk:Label Content="Language: " Height="28" HorizontalAlignment="Left" Margin="0,12,0,0" Name="label2" VerticalAlignment="Top" Width="75" Grid.Column="1" />
-        <sdk:Label Content="Autor: " Height="28" HorizontalAlignment="Left" Margin="0,44,0,0" Name="label3" VerticalAlignment="Top" Width="75" Grid.Column="1" />
-        <sdk:Label Content="Origin: " Height="28" HorizontalAlignment="Left" Margin="0,78,0,0" Name="label4" VerticalAlignment="Top" Width="75" Grid.Column="1" />
-        <ComboBox Grid.Column="1" Height="25" HorizontalAlignment="Left" Margin="110,12,0,0" Name="cmbLanguage" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=Languages, Mode=TwoWay}" DisplayMemberPath="LanguageName" SelectedValuePath="LanguageId" SelectedValue="{Binding Path=Language, Mode=TwoWay}" />
-        <ComboBox Grid.Column="1" Height="25" HorizontalAlignment="Left" Margin="110,44,0,0" Name="cmbAutor" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=Autors}" DisplayMemberPath="AutorName" SelectedValuePath="AutorId" SelectedValue="{Binding Path=Autor, Mode=TwoWay}"/>
-        <ComboBox Grid.Column="1" Height="25" HorizontalAlignment="Left" Margin="110,78,0,0" Name="cmbOrigin" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=Origins}" DisplayMemberPath="OriginName" SelectedValuePath="OriginId" SelectedValue="{Binding Path=Origin, Mode=TwoWay}" />
+        <sdk:Label Content="Language: " Height="28" HorizontalAlignment="Left" Margin="298,12,0,0" Name="label2" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" />
+        <sdk:Label Content="Autor: " Height="28" HorizontalAlignment="Left" Margin="298,44,0,0" Name="label3" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" />
+        <sdk:Label Content="Origin: " Height="28" HorizontalAlignment="Left" Margin="298,78,0,0" Name="label4" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" />
+        <ComboBox Grid.Column="1" Height="25" HorizontalAlignment="Left" Margin="43,12,0,0" Name="cmbLanguage" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=Languages, Mode=TwoWay}" DisplayMemberPath="LanguageName" SelectedValuePath="LanguageId" SelectedValue="{Binding Path=Language, Mode=TwoWay}" />
+        <ComboBox Grid.Column="1" Height="25" HorizontalAlignment="Left" Margin="43,44,0,0" Name="cmbAutor" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=Autors}" DisplayMemberPath="AutorName" SelectedValuePath="AutorId" SelectedValue="{Binding Path=Autor, Mode=TwoWay}"/>
+        <ComboBox Grid.Column="1" Height="25" HorizontalAlignment="Left" Margin="43,78,0,0" Name="cmbOrigin" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=Origins}" DisplayMemberPath="OriginName" SelectedValuePath="OriginId" SelectedValue="{Binding Path=Origin, Mode=TwoWay}" />
         <sdk:Label Content="Content" Height="28" HorizontalAlignment="Left" Margin="11,12,0,0" Name="lblContent" VerticalAlignment="Top" Width="120" />
         <sdk:Label Content="Description" Height="28" HorizontalAlignment="Left" Margin="11,107,0,0" Name="label5" VerticalAlignment="Top" Width="120" />
-        <TextBlock HorizontalAlignment="Left" Margin="10,36,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding ValidationMessage}" VerticalAlignment="Top" Height="21" Foreground="Red" Width="274"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,14,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding ValidationMessage}" VerticalAlignment="Top" Height="21" Foreground="Red" Width="274"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="298,118,0,0" VerticalAlignment="Top" Width="120" Content="Lexicon:" Grid.ColumnSpan="2"/>
+        <TextBox Height="95" HorizontalAlignment="Left" Margin="43,118,0,0" x:Name="txtLexicon" VerticalAlignment="Top" Width="211" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Text="{Binding Lexicon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" />
     </Grid>
 </sdk:ChildWindow>

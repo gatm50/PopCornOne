@@ -79,7 +79,7 @@ namespace OriginWidget.ViewModel
         public DelegateCommand CreateOriginCommand { get; private set; }
         void AddContact_Execute(object parameters)
         {
-            OriginReference.Origin temporalLanguage = new OriginReference.Origin { OriginId = 0, OriginName = "Insert Origin Name", OriginUrl = "" };
+            OriginReference.Origin temporalLanguage = new OriginReference.Origin { OriginId = 0, OriginName = "", OriginUrl = "" };
             EditorWindow dialog = new EditorWindow();
             EditorViewModel editorViewModel = new EditorViewModel(temporalLanguage);
             _modalDialogService.ShowDialog<EditorViewModel>(dialog,

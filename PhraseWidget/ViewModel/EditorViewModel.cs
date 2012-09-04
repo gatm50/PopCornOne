@@ -91,6 +91,20 @@ namespace PhraseWidget.ViewModel
             }
         }
 
+        private string _lexicon;
+        public string Lexicon
+        {
+            get
+            {
+                return _lexicon;
+            }
+            set
+            {
+                _lexicon = value;
+                NotifyPropertyChanged(() => this.Lexicon);
+            }
+        }
+
         public ObservableCollection<LanguageReference.Language> Languages { get; set; }
         public ObservableCollection<AutorReference.Autor> Autors { get; set; }
         public ObservableCollection<OriginReference.Origin> Origins { get; set; }
@@ -175,7 +189,7 @@ namespace PhraseWidget.ViewModel
             temporalTranslation.TranslationContent = this.Content;
             temporalTranslation.TranslationFirstLetter = this.Content[0].ToString();
             temporalTranslation.TranslationDescription = this.Description;
-            temporalTranslation.Lexicon = "";
+            temporalTranslation.Lexicon = this.Lexicon;
             temporalTranslation.LanguageId = Convert.ToInt32(Language);
             temporalTranslation.PhraseId = this.TranslationResult.PhraseId;
             temporalTranslation.PhraseByDefault = this.TranslationResult.PhraseByDefault;
@@ -200,6 +214,7 @@ namespace PhraseWidget.ViewModel
             this.Language = this.TranslationResult.LanguageId;
             this.Content = this.TranslationResult.TranslationContent;
             this.Description = this.TranslationResult.TranslationDescription;
+            this.Lexicon = this.TranslationResult.Lexicon;
         }
 
         public bool ValidateData()
@@ -208,6 +223,8 @@ namespace PhraseWidget.ViewModel
             if (this.Content == null || this.Content== string.Empty)
                 result= false;
             if (this.Description == null || this.Description == string.Empty)
+                result = false;
+            if (this.Lexicon == null || this.Lexicon == string.Empty)
                 result = false;
             if (this.Language == 0)
                 result = false;

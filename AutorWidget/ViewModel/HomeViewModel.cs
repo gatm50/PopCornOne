@@ -77,7 +77,7 @@ namespace AutorWidget.ViewModel
         public DelegateCommand CreateAutorCommand { get; private set; }
         void AddAutor_Execute(object parameters)
         {
-            AutorReference.Autor temporalAutor = new AutorReference.Autor { AutorId = 0, AutorName = "Insert Language Name", AutorUrl = "" };
+            AutorReference.Autor temporalAutor = new AutorReference.Autor { AutorId = 0, AutorName = "", AutorUrl = "" };
             EditorWindow dialog = new EditorWindow();
             EditorViewModel editorViewModel = new EditorViewModel(temporalAutor);
             _modalDialogService.ShowDialog<EditorViewModel>(dialog,

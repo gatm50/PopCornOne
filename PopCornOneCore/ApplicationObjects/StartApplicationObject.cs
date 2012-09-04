@@ -11,7 +11,7 @@ namespace PopCornOneCoreWindowsPhone.ApplicationObjects
     {
         public void Start()
         {
-            this.RequestNavigate<MainMenuViewModel>();
+            this.RequestNavigate<MainViewModel>();
         }
 
         public bool ApplicationCanOpenBookmarks

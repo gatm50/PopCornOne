@@ -48,6 +48,34 @@ namespace PhraseWidget.ViewModel
             }
         }
 
+        private string _lexicon;
+        public string Lexicon
+        {
+            get
+            {
+                return _lexicon;
+            }
+            set
+            {
+                _lexicon = value;
+                NotifyPropertyChanged(() => this.Lexicon);
+            }
+        }
+
+        private string _validationMessage;
+        public string ValidationMessage
+        {
+            get
+            {
+                return _validationMessage;
+            }
+            set
+            {
+                _validationMessage = value;
+                NotifyPropertyChanged(() => this.ValidationMessage);
+            }
+        }
+
         public ObservableCollection<LanguageReference.Language> Languages { get; set; }
         public TranslationReference.Translation TranslationResult { get; set; }
         private LanguageReference.LanguageServiceClient _languageClient;
@@ -63,10 +91,13 @@ namespace PhraseWidget.ViewModel
             this.Description = translation.TranslationDescription;
             this.Language = translation.LanguageId;
             this.TranslationResult.TranslationId = translation.TranslationId;
+            this.Lexicon = translation.Lexicon;
 
             _languageClient = new LanguageReference.LanguageServiceClient();
             _languageClient.DisplayLanguagesCompleted += DisplayListLanguageComplete;
             _languageClient.DisplayLanguagesAsync();
+
+            this.ValidationMessage = string.Empty;
         }
 
         private void DisplayListLanguageComplete(object sender, LanguageReference.DisplayLanguagesCompletedEventArgs e)
@@ -84,8 +115,24 @@ namespace PhraseWidget.ViewModel
             this.TranslationResult.TranslationContent = this.Content;
             this.TranslationResult.TranslationFirstLetter = this.Content[0].ToString();
             this.TranslationResult.TranslationDescription = this.Description;
-            this.TranslationResult.Lexicon = "";
+            this.TranslationResult.Lexicon = this.Lexicon;
             this.TranslationResult.LanguageId = Convert.ToInt32(Language);
+        }
+
+        public bool ValidateData()
+        {
+            bool result = true;
+            if (this.Content == null || this.Content == string.Empty)
+                result = false;
+            if (this.Description == null || this.Description == string.Empty)
+                result = false;
+            if (this.Lexicon == null || this.Lexicon == string.Empty)
+                result = false;
+            if (this.Language == 0)
+                result = false;
+            if (!result)
+                this.ValidationMessage = "All the fields are required.";
+            return result;
         }
     }
 }

@@ -16,8 +16,13 @@ namespace PhraseWidget
 
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
-            _viewModel.CreateATranslation();
-            this.DialogResult = true;
+            if (_viewModel.ValidateData())
+            {
+                _viewModel.CreateATranslation();
+                this.DialogResult = true;
+            }
+            else
+                return;
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)

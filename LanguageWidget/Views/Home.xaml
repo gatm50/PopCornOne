@@ -5,6 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
     xmlns:reference="clr-namespace:LanguageWidget.LanguageReference;assembly=LanguageWidget"
+    xmlns:local="clr-namespace:LanguageWidget"
     d:DesignWidth="340" d:DesignHeight="300" mc:Ignorable="d"
     Style="{StaticResource PageStyle}" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
 
@@ -15,7 +16,7 @@
             </sdk:DataGrid.Columns>
         </sdk:DataGrid>
         <Button Content="Create New" Height="30" HorizontalAlignment="Left" Margin="12,48,0,0" Name="btnCreate" VerticalAlignment="Top" Width="88" Command="{Binding CreateLanguageCommand}" FontWeight="Normal" />
-        <TextBox Height="30" HorizontalAlignment="Left" Margin="105,12,0,0" Name="txtSearch" VerticalAlignment="Top" Width="120" Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+        <local:WatermarkedTextbox Height="30" HorizontalAlignment="Left" Margin="105,12,0,0" Name="txtSearch" VerticalAlignment="Top" Width="167" Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Watermark="Searh a Language" />
         <Button Content="Edit" Height="30" HorizontalAlignment="Left" Margin="105,48,0,0" Name="btnEdit" VerticalAlignment="Top" Width="75" Command="{Binding EditLanguageCommand}" CommandParameter="{Binding ElementName=dtgLanguages, Path=SelectedItem}" FontWeight="Normal" />
         <Button Content="Delete" Height="30" HorizontalAlignment="Right" Margin="0,48,68,0" Name="btnDelete" VerticalAlignment="Top" Width="75" Command="{Binding DeleteLanguageCommand}" CommandParameter="{Binding ElementName=dtgLanguages, Path=SelectedItem}" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" FontSize="14" />
         <sdk:Label Height="28" HorizontalAlignment="Left" Margin="12,14,0,0" Name="lblSearch" VerticalAlignment="Top" Width="120" Content="Search Tearm: " />
