@@ -67,8 +67,8 @@ namespace PopCornOneWebApp.WebServices
                     if (translation.PhraseByDefault)
                     {
                         var temporalTranslation = context.Translations.FirstOrDefault(
-                            x=>x.TranslationId != translation.TranslationId 
-                            && x.PhraseId == translation.PhraseId );
+                            x => x.TranslationId != translation.TranslationId
+                            && x.PhraseId == translation.PhraseId);
                         temporalTranslation.PhraseByDefault = true;
                         context.Entry(temporalTranslation).State = EntityState.Modified;
                         var temporalPhrase = context.Phrases.FirstOrDefault(x => x.phraseId == translation.PhraseId);
@@ -88,10 +88,29 @@ namespace PopCornOneWebApp.WebServices
             }
         }
 
-
         public List<Translation> DisplayTranslationsByPhraseId(int phraseId)
         {
             List<Translation> res = context.Translations.Where(x => x.PhraseId == phraseId).ToList();
+            return res;
+        }
+
+        public List<Translation> DisplayTranslationByLexicon(string lexicon, int languageId)
+        {
+            List<Translation> res = context.Translations.Where(x => x.Lexicon.Contains(lexicon) == true).ToList();
+            res = res.Where(x => x.LanguageId == languageId).ToList();
+            return res;
+        }
+
+        public List<Translation> DisplayTranslationByFirstLetter(string character, int languageId)
+        {
+            List<Translation> res = context.Translations.Where(x => x.TranslationContent.StartsWith(character) == true).ToList();
+            res = res.Where(x => x.LanguageId == languageId).ToList();
+            return res;
+        }
+
+        public List<Translation> DisplayTranslationByLanguage(int languageId)
+        {
+            List<Translation> res = context.Translations.Where(x => x.LanguageId == languageId).ToList();
             return res;
         }
     }

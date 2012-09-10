@@ -19,6 +19,15 @@ namespace PopCornOneWebApp.WebServices
         List<Translation> DisplayTranslationsByPhraseId(int phraseId);
 
         [OperationContract]
+        List<Translation> DisplayTranslationByLexicon(string lexicon, int languageId);
+
+        [OperationContract]
+        List<Translation> DisplayTranslationByFirstLetter(string character, int languageId);
+
+        [OperationContract]
+        List<Translation> DisplayTranslationByLanguage( int languageId);
+
+        [OperationContract]
         bool CreateTranslation(Translation translation);
 
         [OperationContract]

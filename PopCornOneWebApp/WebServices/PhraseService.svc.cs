@@ -54,10 +54,10 @@ namespace PopCornOneWebApp.WebServices
             {
                 Phrase phrase = context.Phrases.Single(x => x.phraseId == id);
                 context.Phrases.Remove(phrase);
+                
                 foreach (var item in context.Translations.Where(x => x.PhraseId == id).ToList())
-                {
                     context.Translations.Remove(item);
-                } 
+
                 context.SaveChanges();
                 return true;
             }
