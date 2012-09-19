@@ -62,11 +62,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\MainMenuViewModel.cs" />
+    <Compile Include="Service References\TranslationReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\PhraseViewModel.cs" />
     <Compile Include="ViewModels\ResultViewModel.cs" />
-    <Compile Include="ViewModels\SimpleTextPropertyViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -85,10 +88,30 @@
     <None Include="Service References\PhraseReference\PopCornOneCoreWindowsPhone.PhraseReference.Phrase.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\TranslationReference\configuration91.svcinfo" />
+    <None Include="Service References\TranslationReference\configuration.svcinfo" />
+    <None Include="Service References\TranslationReference\PopCornOneCoreWindowsPhone.TranslationReference.Translation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranslationReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="ServiceReferences.ClientConfig" />
+    <None Include="Service References\TranslationReference\TranslationService.wsdl" />
+    <None Include="Service References\TranslationReference\TranslationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranslationReference\TranslationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranslationReference\TranslationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\PhraseReference\" />
+    <WCFMetadataStorage Include="Service References\TranslationReference\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\PhraseReference\configuration91.svcinfo" />

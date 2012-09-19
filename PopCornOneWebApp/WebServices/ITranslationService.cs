@@ -28,6 +28,9 @@ namespace PopCornOneWebApp.WebServices
         List<Translation> DisplayTranslationByLanguage( int languageId);
 
         [OperationContract]
+        List<string> DisplayAllLexicalByLanguage(int languageId);
+
+        [OperationContract]
         bool CreateTranslation(Translation translation);
 
         [OperationContract]

@@ -113,5 +113,37 @@ namespace PopCornOneWebApp.WebServices
             List<Translation> res = context.Translations.Where(x => x.LanguageId == languageId).ToList();
             return res;
         }
+
+        public List<string> DisplayAllLexicalByLanguage(int languageId)
+        {
+            List<Translation> translationsByLanguage = context.Translations.Where(x => x.LanguageId == languageId).ToList();
+            List<string> resultAllLexicals = new List<string>();
+            
+            foreach (var translation in translationsByLanguage)
+            {
+                foreach (var lexical in this.GetLexicalsFromTranslation(translation))
+                {
+                    if (!resultAllLexicals.Contains(lexical))
+                        resultAllLexicals.Add(lexical);
+                }
+            }
+            
+            return resultAllLexicals;
+        }
+
+        private List<string> GetLexicalsFromTranslation(Translation currentTranslation)
+        {
+            string[] lexicons = currentTranslation.Lexicon.Split('#');
+            List<string> result = new List<string>();
+            if (lexicons.Count() > 0)
+            {
+                foreach (var item in lexicons)
+                {
+                    if (item != "" && item != string.Empty)
+                        result.Add(item);
+                }
+            }
+            return result;
+        }
     }
 }

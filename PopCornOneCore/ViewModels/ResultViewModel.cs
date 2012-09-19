@@ -1,18 +1,28 @@
-﻿using System;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
+﻿using System.Collections.ObjectModel;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace PopCornOneCoreWindowsPhone.ViewModels
 {
-    public class ResultViewModel
+    public class ResultViewModel : MvxViewModel
     {
+        private TranslationReference.TranslationServiceClient _translationClient;
+        public ObservableCollection<TranslationReference.Translation> PhraseResults;
 
+        public ResultViewModel(string lexicon)
+        {
+            _translationClient = new TranslationReference.TranslationServiceClient();
+            _translationClient.DisplayTranslationByLexiconCompleted += this.DisplayTranslationByLexiconComplete;
+            this.PhraseResults = new ObservableCollection<TranslationReference.Translation>();
+
+            _translationClient.DisplayTranslationByLexiconAsync(lexicon);
+        }
+
+        private void DisplayTranslationByLexiconComplete(object sender, TranslationReference.DisplayTranslationByLexiconCompletedEventArgs e)
+        {
+            this.PhraseResults.Clear();
+
+            foreach (var item in e.Result)
+                this.PhraseResults.Add(item);
+        }
     }
 }

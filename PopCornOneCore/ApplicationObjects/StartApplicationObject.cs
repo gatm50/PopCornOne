@@ -18,7 +18,5 @@ namespace PopCornOneCoreWindowsPhone.ApplicationObjects
         {
             get { return true; }
         }
-
-
     }
 }
