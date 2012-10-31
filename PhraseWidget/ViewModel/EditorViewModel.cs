@@ -189,7 +189,7 @@ namespace PhraseWidget.ViewModel
             temporalTranslation.TranslationContent = this.Content;
             temporalTranslation.TranslationFirstLetter = this.Content[0].ToString();
             temporalTranslation.TranslationDescription = this.Description;
-            temporalTranslation.Lexicon = this.Lexicon;
+            temporalTranslation.Lexicon = this.Lexicon.ToLower();
             temporalTranslation.LanguageId = Convert.ToInt32(Language);
             temporalTranslation.PhraseId = this.TranslationResult.PhraseId;
             temporalTranslation.PhraseByDefault = this.TranslationResult.PhraseByDefault;

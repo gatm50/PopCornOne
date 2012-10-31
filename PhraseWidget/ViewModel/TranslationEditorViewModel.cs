@@ -115,7 +115,7 @@ namespace PhraseWidget.ViewModel
             this.TranslationResult.TranslationContent = this.Content;
             this.TranslationResult.TranslationFirstLetter = this.Content[0].ToString();
             this.TranslationResult.TranslationDescription = this.Description;
-            this.TranslationResult.Lexicon = this.Lexicon;
+            this.TranslationResult.Lexicon = this.Lexicon.ToLower();
             this.TranslationResult.LanguageId = Convert.ToInt32(Language);
         }
 
